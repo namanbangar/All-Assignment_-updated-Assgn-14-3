@@ -1,0 +1,51 @@
+# matrixTests/DESCRIPTION
+Package: matrixTests
+Title: Fast Statistical Hypothesis Tests on Rows and Columns of
+        Matrices
+Version: 0.1.0
+Authors@R: person("Karolis", "Koncevičius", email = "karolis.koncevicius@gmail.com", role = c("aut", "cre"))
+Maintainer: Karolis Koncevičius <karolis.koncevicius@gmail.com>
+Description: Functions to perform fast statistical hypothesis tests on rows/columns of matrices.
+  The main goals are: 1) speed via vectorization, 2) output that is detailed and easy to use,
+  3) compatibility with tests implemented in R (like those available in the 'stats' package).
+Depends: R (>= 3.2.2)
+Imports: matrixStats
+Suggests: testthat
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/KKPMW/matrixTests
+BugReports: https://github.com/KKPMW/matrixTests/issues
+RoxygenNote: 6.0.1
+NeedsCompilation: no
+Packaged: 2018-03-05 19:25:36 UTC; karolis
+Author: Karolis Koncevičius [aut, cre]
+Repository: CRAN
+Date/Publication: 2018-03-05 20:12:30 UTC
+
+#Using Excel
+Hypothesis Test in Excel, Microsoft Excel contains a powerful statistical package where you can calculate everything from means and medians to chi-square. You can also run a hypothesis test. That said, Excel isn’t really an intuitive package when it comes to more advanced functions, like a Hypothesis Test in Excel for the Population Mean. There’s no single button to press. Instead, you’re going to have to go through a series of short steps — which will feel logical if you’re already comfortable with hypothesis testing. You have a couple of choices for hypothesis testing in Excel using z-scores: using the Data Analysis Toolpak to run a two sample test for means, or you can manually calculate the z-score.
+
+Hypothesis Test in Excel: Two Sample for Means
+	
+Hypothesis Test in Excel: Manual Steps
+
+ 
+Step 1: Type your data into a single column in Excel. For example, type your data into cells A1:A40.
+
+Step 2: Click the “Data” tab and then click “Data Analysis.” If you don’t see the Data Analysis button then you may need to load the Data Analysis Toolpak.
+
+Step 3: Click “Descriptive Statistics“ and then click “OK.” When the Descriptive Statistics dialog box opens, click “Summary Statistics” and then type the location for a cell where you want your result to appear. For example, type”B1.”
+
+Step 4: Click “OK.” A variety of descriptive statistics, like the median and mode, will appear starting in cell B1.
+
+Step 5: Locate the cells that have the mean and the standard error results in it. If you typed in cell B1 in Step 3, your mean will be in cell C3 and your standard error will be in cell C4. Take a note of those cell locations.
+
+Step 6: Type the following formula into cell D1 (assuming your mean is in cell C3 and your SE is in cell C4 — if they are not, you’ll need to adjust the formula):
+(C3-0)/C4
+
+Change the “zero” to reflect the mean in your null hypothesis. For example, if your null hypothesis states that the mean is $7 per hour, then change the 0 to “7.”
+
+Step 7: Press “Enter” to get the value of the test statistic. Compare the value to the accepted value for your mean from the z-table*. If the test statistic falls into the accepted range, then you will fail to reject the null hypothesis.
+
+Warning: This technique will really only work well for larger sample sizes (>30).
